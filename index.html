@@ -4,10 +4,26 @@
   <meta charset="UTF-8">
   <title>Redireccionando...</title>
   <script>
-    window.location.href = "https://wa.me/3518745007"
-  </script>
-</head>
-<body>
-  <p>Si no es redirigido, haz clic <a href="https://wa.me/3518745007">aquí</a>.</p>
-</body>
+    // Obtener el número de la URL
+    var numero = window.location.pathname.split("/").pop();
+
+    // Redirigir a la URL correspondiente
+    switch (numero) {
+      case "1":
+        window.location.href = "https://wa.me/3518745007";
+        break;
+      case "2":
+        window.location.href = "https://wa.me/3515947511";
+        break;
+      // Agrega más casos según sea necesario
+
+      // Por defecto, redirigir a una página predeterminada si no se encuentra un número válido
+      default:
+        window.location.href = "https://www.google.com";
+    }
+    </script>
+  </head>
+  <body>
+    <p>Si no eres redirigido, haz clic <a href="https://www.paginapredeterminada.com">aquí</a>.</p>
+  </body>
 </html>
